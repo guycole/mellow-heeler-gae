@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jaded-nomad:war">
+    <output-path>$PROJECT_DIR$/mellow-heeler/target</output-path>
+    <root id="archive" name="mellow-heeler.war">
+      <element id="artifact" artifact-name="jaded-nomad:war exploded" />
+    </root>
+  </artifact>
+</component>

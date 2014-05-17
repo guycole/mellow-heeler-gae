@@ -1,4 +1,4 @@
-package com.shastrax.jaded.nomad.model;
+package com.digiburo.mellow.heeler.model;
 
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
@@ -6,11 +6,11 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 import java.util.Date;
 
 /**
- * game score response container
+ * json location response container
  *
  * @author gsc
  */
-public class GameScoreResponse {
+public class ObservationResponse {
 
   private String ipAddress;
   private String receipt;
@@ -95,6 +95,6 @@ public class GameScoreResponse {
   }
 }
 /*
- * Copyright 2014 Shasta Traction, INC
- * Created on April 3, 2014 by gsc
+ * Copyright 2014 Digital Burro, INC
+ * Created on May 16, 2014 by gsc
  */

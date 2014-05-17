@@ -1,22 +1,23 @@
-package com.shastrax.jaded.nomad.model;
+package com.digiburo.mellow.heeler.model;
 
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 import java.util.Date;
+import java.util.UUID;
 
 /**
- * google cloud messaging response container
+ * json location response container
  *
  * @author gsc
  */
-public class GcmRegisterResponse {
+public class LocationResponse {
 
   private String ipAddress;
   private String receipt;
   private String status;
   private Date timeStamp = new Date();
-  private Integer version = 1;
+  private Integer messageVersion = 1;
 
   @JsonProperty("_links")
   private Links links = new Links();
@@ -54,12 +55,12 @@ public class GcmRegisterResponse {
     this.timeStamp = timeStamp;
   }
 
-  public Integer getVersion() {
-    return version;
+  public Integer getMessageVersion() {
+    return messageVersion;
   }
 
-  public void setVersion(int version) {
-    this.version = version;
+  public void setVersion(int messageVersion) {
+    this.messageVersion = messageVersion;
   }
 
   public Links getLinks() {
@@ -95,6 +96,6 @@ public class GcmRegisterResponse {
   }
 }
 /*
- * Copyright 2014 Shasta Traction, INC
- * Created on April 3, 2014 by gsc
+ * Copyright 2014 Digital Burro, INC
+ * Created on May 16, 2014 by gsc
  */

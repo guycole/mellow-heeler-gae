@@ -1,4 +1,4 @@
-package com.shastrax.jaded.nomad.mvc;
+package com.digiburo.mellow.heeler.mvc;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

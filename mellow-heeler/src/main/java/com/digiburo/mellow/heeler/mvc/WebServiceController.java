@@ -1,9 +1,9 @@
-package com.shastrax.jaded.nomad.mvc;
+package com.digiburo.mellow.heeler.mvc;
 
-import com.shastrax.jaded.nomad.model.GameScoreRequest;
-import com.shastrax.jaded.nomad.model.GameScoreResponse;
-import com.shastrax.jaded.nomad.model.GcmRegisterRequest;
-import com.shastrax.jaded.nomad.model.GcmRegisterResponse;
+import com.digiburo.mellow.heeler.model.LocationRequest;
+import com.digiburo.mellow.heeler.model.LocationResponse;
+import com.digiburo.mellow.heeler.model.ObservationRequest;
+import com.digiburo.mellow.heeler.model.ObservationResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,29 +23,23 @@ public class WebServiceController {
   private final Logger logger = Logger.getLogger(getClass().getName());
 
   /**
-   * POST a new score
+   * POST a new location
    * @param request
-   * @param gameScore
+   * @param location payload
    * @return
    */
-  @RequestMapping(value = "/gameScore", method = RequestMethod.POST, headers = {"content-type=application/json"})
+  @RequestMapping(value = "/location", method = RequestMethod.POST, headers = {"content-type=application/json"})
   @ResponseBody
-  public GameScoreResponse newScore(HttpServletRequest request, @RequestBody GameScoreRequest gameScore) {
-    logger.info("newScore:" + gameScore.getApplicationName() + ":" + gameScore.getUserName() + ":" + gameScore.getInstallationId());
-    System.out.println("appName:" + gameScore.getApplicationName());
-    System.out.println("installId:" + gameScore.getInstallationId());
-    System.out.println("score:" + gameScore.getScore());
-    System.out.println("userName:" + gameScore.getUserName());
-    System.out.println("requestAddr:" + request.getRemoteAddr());
-    //TODO test legal appName
-    System.out.println(request.getRequestURL().toString() + "?" + request.getQueryString());
+  public LocationResponse newLocation(HttpServletRequest request, @RequestBody LocationRequest locationRequest) {
+    logger.info("newLocation:" + locationRequest.getInstallationId() + ":" + locationRequest.getSortieId());
+    logger.info("newLocation:" + locationRequest.getRawLocationList().size());
 
-    GameScoreResponse response = new GameScoreResponse();
-    response.setReceipt(new UUID());
+    LocationResponse response = new LocationResponse();
     response.setRemoteIpAddress(request.getRemoteAddr());
+    response.setReceipt(UUID.randomUUID().toString());
     response.setStatus("OK");
 
-    GameScoreResponse.Self self = new GameScoreResponse.Self();
+    LocationResponse.Self self = new LocationResponse.Self();
     self.setHref(request.getRequestURL().toString());
     response.getLinks().setSelf(self);
 
@@ -53,29 +47,30 @@ public class WebServiceController {
   }
 
   /**
-   * POST a new Google Cloud Message registration
+   * POST a new observation
    * @param request
-   * @param gcmRequest
+   * @param observation payload
    * @return
    */
-  @RequestMapping(value = "/gcmRegister", method = RequestMethod.POST, headers = {"content-type=application/json"})
+  @RequestMapping(value = "/observation", method = RequestMethod.POST, headers = {"content-type=application/json"})
   @ResponseBody
-  public GcmRegisterResponse newScore(HttpServletRequest request, @RequestBody GcmRegisterRequest gcmRequest) {
-    logger.info("gcmRegister:" + gcmRequest.getApplicationName() + ":" + gcmRequest.getInstallationId());
-    System.out.println("appName:" + gcmRequest.getApplicationName());
-    System.out.println("installId:" + gcmRequest.getInstallationId());
-    System.out.println("gcmId:" + gcmRequest.getCloudMessageId());
-    System.out.println("requestAddr:" + request.getRemoteAddr());
+  public ObservationResponse newObservation(HttpServletRequest request, @RequestBody ObservationRequest observationRequest) {
+    logger.info("newObservation:" + observationRequest.getInstallationId() + ":" + observationRequest.getSortieId());
 
-    GcmRegisterResponse response = new GcmRegisterResponse();
-    response.setReceipt(new UUID());
+    ObservationResponse response = new ObservationResponse();
+    response.setReceipt(UUID.randomUUID().toString());
     response.setRemoteIpAddress(request.getRemoteAddr());
     response.setStatus("OK");
 
-    GcmRegisterResponse.Self self = new GcmRegisterResponse.Self();
+    ObservationResponse.Self self = new ObservationResponse.Self();
     self.setHref(request.getRequestURL().toString());
     response.getLinks().setSelf(self);
 
     return response;
   }
 }
+
+/*
+ * Copyright 2014 Digital Burro, INC
+ * Created on May 17, 2014 by gsc
+ */

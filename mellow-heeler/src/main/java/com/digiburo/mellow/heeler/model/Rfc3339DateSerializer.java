@@ -1,4 +1,4 @@
-package com.shastrax.jaded.nomad.model;
+package com.digiburo.mellow.heeler.model;
 
 import org.codehaus.jackson.JsonGenerator;
 import org.codehaus.jackson.JsonProcessingException;
@@ -26,6 +26,6 @@ public class Rfc3339DateSerializer extends JsonSerializer<Date> {
   }
 }
 /*
- * Copyright 2014 Shasta Traction, INC
- * Created on April 4, 2014 by gsc
+ * Copyright 2014 Digital Burro, INC
+ * Created on May 16, 2014 by gsc
  */
