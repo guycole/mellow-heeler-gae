@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.digiburo.mellow.heeler</groupId>
-  <artifactId>heeler-gae</artifactId>
+  <artifactId>mellow-heeler-ws</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
