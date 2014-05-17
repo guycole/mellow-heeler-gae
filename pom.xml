@@ -8,13 +8,13 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.digiburo.mellow</groupId>
-  <artifactId>mellow-heeler</artifactId>
+  <groupId>com.digiburo.mellow.heeler</groupId>
+  <artifactId>heeler-server-root</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>heeler</name>
-  <description>Mellow Heeler Server</description>
+  <name>Mellow Heeler</name>
+  <description>Mellow Heeler GAE Root</description>
 
   <organization>
     <name>Digital Burro</name>
@@ -26,6 +26,6 @@
   </properties>
 
   <modules>
-    <module>mellow-heeler</module>
+    <module>mellow-heeler-ws</module>
   </modules>
 </project>
