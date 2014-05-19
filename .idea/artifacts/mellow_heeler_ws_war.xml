@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="mellow-heeler-ws:war">
+    <output-path>$PROJECT_DIR$/mellow-heeler-ws/target</output-path>
+    <root id="archive" name="mellow-heeler-ws.war">
+      <element id="artifact" artifact-name="mellow-heeler-ws:war exploded" />
+    </root>
+  </artifact>
+</component>
