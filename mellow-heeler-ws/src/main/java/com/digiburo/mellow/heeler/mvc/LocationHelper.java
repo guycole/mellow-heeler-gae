@@ -40,6 +40,7 @@ public class LocationHelper {
       geographicLocation.setInstallationUuid(geoLocationRequest.getInstallationId());
       geographicLocation.setLocation(new GeoPt(geoLocation.getLatitude().floatValue(), geoLocation.getLongitude().floatValue()));
       geographicLocation.setLocationUuid(geoLocation.getLocationId());
+      geographicLocation.setSpecialFlag(geoLocation.isSpecialFlag());
       geographicLocation.setSortieUuid(geoLocationRequest.getSortieId());
 
       long timeStampMs = geoLocation.getTimeStampMs();

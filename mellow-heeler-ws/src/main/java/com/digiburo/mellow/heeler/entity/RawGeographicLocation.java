@@ -38,7 +38,7 @@ public class RawGeographicLocation {
   /**
    * true, this location is flagged for special interest
    */
-  private Boolean specialFlag = false;
+  private Boolean specialFlag;
 
   /**
    * location time as String

@@ -8,7 +8,7 @@ package com.digiburo.mellow.heeler.json;
 public class SortieRequest1 {
   private String installationId;
   private String sortieId;
-  private String sortieName;
+  private String sortieName = "default";
   private Long timeStampMs;
   private Integer messageVersion = 1;
 

@@ -19,6 +19,7 @@ public class GeoLocationResponse1 {
   private Date timeStamp = new Date();
   private Integer messageVersion = 1;
   private Integer rowCount = 0;
+  private Boolean specialFlag = false;
 
   @JsonProperty("_links")
   private Links links = new Links();
@@ -45,6 +46,14 @@ public class GeoLocationResponse1 {
 
   public void setSortieId(String sortieId) {
     this.sortieId = sortieId;
+  }
+
+  public Boolean isSpecialFlag() {
+    return specialFlag;
+  }
+
+  public void setSpecialFlag(boolean flag) {
+    specialFlag = flag;
   }
 
   public String getStatus() {

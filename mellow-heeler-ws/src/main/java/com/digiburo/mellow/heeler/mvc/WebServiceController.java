@@ -159,9 +159,8 @@ public class WebServiceController {
     //TODO test for legal installation UUID
     //TODO test for legal message version
 
-    //ObservationHelper helper = new ObservationHelper();
-    //int count = helper.persist(observationRequest);
-    int count = 1;
+    SortieHelper helper = new SortieHelper();
+    int count = helper.persist(sortieRequest);
 
     SortieResponse1 response = new SortieResponse1();
     response.setReceipt(UUID.randomUUID().toString());

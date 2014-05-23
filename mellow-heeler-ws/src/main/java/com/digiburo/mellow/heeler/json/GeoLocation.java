@@ -12,6 +12,7 @@ public class GeoLocation {
   private Double altitude;
   private Double latitude;
   private Double longitude;
+  private Boolean specialFlag = false;
   private Long timeStampMs;
   private String locationId;
 
@@ -61,6 +62,14 @@ public class GeoLocation {
 
   public void setLocationId(String arg) {
     locationId = arg;
+  }
+
+  public Boolean isSpecialFlag() {
+    return specialFlag;
+  }
+
+  public void setSpecialFlag(boolean arg) {
+    specialFlag = arg;
   }
 }
 /*
