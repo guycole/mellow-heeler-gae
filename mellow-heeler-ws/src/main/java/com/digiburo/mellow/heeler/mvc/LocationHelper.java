@@ -4,25 +4,31 @@ import com.digiburo.mellow.heeler.entity.RawGeographicLocation;
 import com.digiburo.mellow.heeler.entity.RawGeographicLocationDao;
 import com.digiburo.mellow.heeler.json.GeoLocation;
 import com.digiburo.mellow.heeler.json.GeoLocationList;
-import com.digiburo.mellow.heeler.json.GeoLocationRequest;
+import com.digiburo.mellow.heeler.json.GeoLocationRequest1;
 import com.google.appengine.api.datastore.GeoPt;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
+import java.util.logging.Logger;
 
 /**
  *  process a fresh JSON message
  */
 public class LocationHelper {
 
+  //
+  private final Logger logger = Logger.getLogger(getClass().getName());
+
   /**
    * Convert from client JSON format and persist to datastore
-   * @param geoLocationRequest
+   * @param geoLocationRequest1
    * @return
    */
-  public int persist(GeoLocationRequest geoLocationRequest) {
+  public int persist(GeoLocationRequest1 geoLocationRequest) {
+    logger.info("persist:" + geoLocationRequest.getLocationList().size());
+
     int count = 0;
     RawGeographicLocationDao dao = new RawGeographicLocationDao();
 

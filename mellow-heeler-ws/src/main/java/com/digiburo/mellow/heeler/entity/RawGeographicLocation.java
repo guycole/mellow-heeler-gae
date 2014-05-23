@@ -13,6 +13,7 @@ public class RawGeographicLocation {
   public static final String PROPERTY_ACCURACY = "accuracy";
   public static final String PROPERTY_ALTITUDE = "altitude";
   public static final String PROPERTY_LOCATION = "location";
+  public static final String PROPERTY_SPECIAL_FLAG = "specialFlag";
   public static final String PROPERTY_TIME_STAMP = "timeStamp";
   public static final String PROPERTY_TIME_STAMP_MS = "timeStampMs";
   public static final String PROPERTY_INSTALLATION_UUID = "installationUuid";
@@ -33,6 +34,11 @@ public class RawGeographicLocation {
    * location in decimal degrees, +North, +East
    */
   private GeoPt location;
+
+  /**
+   * true, this location is flagged for special interest
+   */
+  private Boolean specialFlag = false;
 
   /**
    * location time as String
@@ -81,6 +87,14 @@ public class RawGeographicLocation {
 
   public void setLocation(GeoPt location) {
     this.location = location;
+  }
+
+  public Boolean isSpecialFlag() {
+    return specialFlag;
+  }
+
+  public void setSpecialFlag(Boolean flag) {
+    specialFlag = flag;
   }
 
   public String getTimeStamp() {

@@ -4,7 +4,7 @@ import com.digiburo.mellow.heeler.entity.RawObservation;
 import com.digiburo.mellow.heeler.entity.RawObservationDao;
 import com.digiburo.mellow.heeler.json.Observation;
 import com.digiburo.mellow.heeler.json.ObservationList;
-import com.digiburo.mellow.heeler.json.ObservationRequest;
+import com.digiburo.mellow.heeler.json.ObservationRequest1;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -21,7 +21,7 @@ public class ObservationHelper {
    * @param observationRequest
    * @return
    */
-  public int persist(ObservationRequest observationRequest) {
+  public int persist(ObservationRequest1 observationRequest) {
     int count = 0;
     RawObservationDao dao = new RawObservationDao();
 

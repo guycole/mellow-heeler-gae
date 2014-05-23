@@ -1,5 +1,5 @@
 <web-app version="2.4"
-	xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns="http://java.sun.com/xml/ns/j2ee"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
@@ -14,5 +14,15 @@
   <servlet-mapping>
     <servlet-name>mvc-dispatcher</servlet-name>
     <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>diagnosticServlet</servlet-name>
+    <servlet-class>com.digiburo.mellow.heeler.diagnostic.DiagnosticServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>diagnosticServlet</servlet-name>
+    <url-pattern>/diagnostic</url-pattern>
   </servlet-mapping>
 </web-app>

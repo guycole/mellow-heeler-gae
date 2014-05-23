@@ -1,11 +1,11 @@
 package com.digiburo.mellow.heeler.mvc;
 
-import com.digiburo.mellow.heeler.entity.RawGeographicLocation;
-import com.digiburo.mellow.heeler.entity.RawObservation;
-import com.digiburo.mellow.heeler.json.GeoLocationRequest;
-import com.digiburo.mellow.heeler.json.GeoLocationResponse;
-import com.digiburo.mellow.heeler.json.ObservationRequest;
-import com.digiburo.mellow.heeler.json.ObservationResponse;
+import com.digiburo.mellow.heeler.json.AuthorizeRequest1;
+import com.digiburo.mellow.heeler.json.AuthorizeResponse1;
+import com.digiburo.mellow.heeler.json.GeoLocationRequest1;
+import com.digiburo.mellow.heeler.json.GeoLocationResponse1;
+import com.digiburo.mellow.heeler.json.ObservationRequest1;
+import com.digiburo.mellow.heeler.json.ObservationResponse1;
 
 import org.springframework.stereotype.Controller;
 
@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.List;
 import java.util.UUID;
 import java.util.logging.Logger;
 
@@ -28,22 +27,20 @@ public class WebServiceController {
   private final Logger logger = Logger.getLogger(getClass().getName());
 
   /**
-   * POST a new location
+   * POST an authorization test
    * @param request
    * @param location payload
    * @return
    */
-  @RequestMapping(value = "/location", method = RequestMethod.POST, headers = {"content-type=application/json"})
+  @RequestMapping(value = "/authorize", method = RequestMethod.POST, headers = {"content-type=application/json"})
   @ResponseBody
-  public GeoLocationResponse newLocation(HttpServletRequest request, @RequestBody GeoLocationRequest geoLocationRequest) {
-    logger.info("newLocation:" + geoLocationRequest.getInstallationId() + ":" + geoLocationRequest.getSortieId());
+  public AuthorizeResponse1 newAuthorize(HttpServletRequest request, @RequestBody AuthorizeRequest1 authorizeRequest) {
+    logger.info("authorize:" + authorizeRequest.getInstallationId());
 
-    //TODO test for legal installation UUID
+    if (authorizeRequest.getMessageVersion().intValue() != 1) {
+      logger.warning("V1 message handler w/bad version:" + authorizeRequest.getMessageVersion());
 
-    if (geoLocationRequest.getMessageVersion().intValue() != 1) {
-      logger.warning("V1 message handler w/bad version:" + geoLocationRequest.getMessageVersion());
-
-      GeoLocationResponse response = new GeoLocationResponse();
+      AuthorizeResponse1 response = new AuthorizeResponse1();
       response.setRemoteIpAddress(request.getRemoteAddr());
       response.setReceipt(UUID.randomUUID().toString());
       response.setStatus("FAIL");
@@ -51,17 +48,62 @@ public class WebServiceController {
       return response;
     }
 
-    LocationHelper helper = new LocationHelper();
-    int count = helper.persist(geoLocationRequest);
-//    List<RawGeographicLocation> xxx = helper.selectBySortie(geoLocationRequest.getSortieId());
-//    logger.info("sortie count:" + xxx.size());
-
-    GeoLocationResponse response = new GeoLocationResponse();
+    AuthorizeResponse1 response = new AuthorizeResponse1();
     response.setRemoteIpAddress(request.getRemoteAddr());
     response.setReceipt(UUID.randomUUID().toString());
     response.setStatus("OK");
 
-    GeoLocationResponse.Self self = new GeoLocationResponse.Self();
+    AuthorizeResponse1.Self self = new AuthorizeResponse1.Self();
+    self.setHref(request.getRequestURL().toString());
+    response.getLinks().setSelf(self);
+
+    return response;
+  }
+
+  /**
+   * POST a new location
+   * @param request
+   * @param location payload
+   * @return
+   */
+  @RequestMapping(value = "/location", method = RequestMethod.POST, headers = {"content-type=application/json"})
+  @ResponseBody
+  public GeoLocationResponse1 newLocation(HttpServletRequest request, @RequestBody GeoLocationRequest1 geoLocationRequest) {
+    logger.info("newLocation::" + geoLocationRequest.getInstallationId() + "::" + geoLocationRequest.getSortieId() + "::");
+
+    //TODO test for legal installation UUID
+
+    /*
+    if (geoLocationRequest.getMessageVersion().intValue() != 1) {
+      logger.warning("V1 message handler w/bad version:" + geoLocationRequest.getMessageVersion());
+
+      GeoLocationResponse1 response = new GeoLocationResponse1();
+      response.setRemoteIpAddress(request.getRemoteAddr());
+      response.setReceipt(UUID.randomUUID().toString());
+      response.setStatus("FAIL");
+
+      return response;
+    }
+    */
+
+    LocationHelper helper = new LocationHelper();
+    int count = helper.persist(geoLocationRequest);
+
+    logger.info("sortie count:" + count + ":" + geoLocationRequest.getLocationList().size());
+
+//    List<RawGeographicLocation> xxx = helper.selectBySortie(geoLocationRequest.getSortieId());
+//    logger.info("sortie count:" + xxx.size());
+
+//    int count = geoLocationRequest.getLocationList().size();
+
+    GeoLocationResponse1 response = new GeoLocationResponse1();
+    response.setRemoteIpAddress(request.getRemoteAddr());
+    response.setReceipt(UUID.randomUUID().toString());
+    response.setStatus("OK");
+    response.setSortieId(geoLocationRequest.getSortieId());
+    response.setRowCount(count);
+
+    GeoLocationResponse1.Self self = new GeoLocationResponse1.Self();
     self.setHref(request.getRequestURL().toString());
     response.getLinks().setSelf(self);
 
@@ -76,7 +118,7 @@ public class WebServiceController {
    */
   @RequestMapping(value = "/observation", method = RequestMethod.POST, headers = {"content-type=application/json"})
   @ResponseBody
-  public ObservationResponse newObservation(HttpServletRequest request, @RequestBody ObservationRequest observationRequest) {
+  public ObservationResponse1 newObservation(HttpServletRequest request, @RequestBody ObservationRequest1 observationRequest) {
     logger.info("newObservation:" + observationRequest.getInstallationId() + ":" + observationRequest.getSortieId());
 
     //TODO test for legal installation UUID
@@ -85,12 +127,16 @@ public class WebServiceController {
     ObservationHelper helper = new ObservationHelper();
     int count = helper.persist(observationRequest);
 
-    ObservationResponse response = new ObservationResponse();
+    logger.info("obs count:" + count + ":" + observationRequest.getObservationList().size());
+
+    ObservationResponse1 response = new ObservationResponse1();
     response.setReceipt(UUID.randomUUID().toString());
     response.setRemoteIpAddress(request.getRemoteAddr());
     response.setStatus("OK");
+    response.setSortieId(observationRequest.getSortieId());
+    response.setRowCount(count);
 
-    ObservationResponse.Self self = new ObservationResponse.Self();
+    ObservationResponse1.Self self = new ObservationResponse1.Self();
     self.setHref(request.getRequestURL().toString());
     response.getLinks().setSelf(self);
 

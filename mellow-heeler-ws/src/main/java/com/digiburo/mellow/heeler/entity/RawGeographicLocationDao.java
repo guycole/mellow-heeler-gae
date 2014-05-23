@@ -27,6 +27,7 @@ public class RawGeographicLocationDao {
     entity.setProperty(RawGeographicLocation.PROPERTY_ACCURACY, arg.getAccuracy());
     entity.setProperty(RawGeographicLocation.PROPERTY_ALTITUDE, arg.getAltitude());
     entity.setProperty(RawGeographicLocation.PROPERTY_LOCATION, arg.getLocation());
+    entity.setProperty(RawGeographicLocation.PROPERTY_SPECIAL_FLAG, arg.isSpecialFlag());
     entity.setProperty(RawGeographicLocation.PROPERTY_TIME_STAMP, arg.getTimeStamp());
     entity.setProperty(RawGeographicLocation.PROPERTY_TIME_STAMP_MS, arg.getTimeStampMs());
     entity.setProperty(RawGeographicLocation.PROPERTY_INSTALLATION_UUID, arg.getInstallationUuid());
@@ -56,6 +57,7 @@ public class RawGeographicLocationDao {
       geographicLocation.setAccuracy((Double) entity.getProperty(RawGeographicLocation.PROPERTY_ACCURACY));
       geographicLocation.setAltitude((Double) entity.getProperty(RawGeographicLocation.PROPERTY_ALTITUDE));
       geographicLocation.setLocation((GeoPt) entity.getProperty(RawGeographicLocation.PROPERTY_LOCATION));
+      geographicLocation.setSpecialFlag((Boolean) entity.getProperty(RawGeographicLocation.PROPERTY_SPECIAL_FLAG));
       geographicLocation.setTimeStamp((String) entity.getProperty(RawGeographicLocation.PROPERTY_TIME_STAMP));
       geographicLocation.setTimeStampMs((Long) entity.getProperty(RawGeographicLocation.PROPERTY_TIME_STAMP_MS));
       geographicLocation.setInstallationUuid((String) entity.getProperty(RawGeographicLocation.PROPERTY_INSTALLATION_UUID));
