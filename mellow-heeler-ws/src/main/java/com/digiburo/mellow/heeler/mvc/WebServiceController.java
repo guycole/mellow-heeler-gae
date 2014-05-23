@@ -7,6 +7,8 @@ import com.digiburo.mellow.heeler.json.GeoLocationResponse1;
 import com.digiburo.mellow.heeler.json.ObservationRequest1;
 import com.digiburo.mellow.heeler.json.ObservationResponse1;
 
+import com.digiburo.mellow.heeler.json.SortieRequest1;
+import com.digiburo.mellow.heeler.json.SortieResponse1;
 import org.springframework.stereotype.Controller;
 
 import org.springframework.web.bind.annotation.RequestBody;
@@ -137,6 +139,38 @@ public class WebServiceController {
     response.setRowCount(count);
 
     ObservationResponse1.Self self = new ObservationResponse1.Self();
+    self.setHref(request.getRequestURL().toString());
+    response.getLinks().setSelf(self);
+
+    return response;
+  }
+
+  /**
+   * POST a new sortie
+   * @param request
+   * @param sortie payload
+   * @return
+   */
+  @RequestMapping(value = "/sortie", method = RequestMethod.POST, headers = {"content-type=application/json"})
+  @ResponseBody
+  public SortieResponse1 newSortie(HttpServletRequest request, @RequestBody SortieRequest1 sortieRequest) {
+    logger.info("newSortie:" + sortieRequest.getInstallationId() + ":" + sortieRequest.getSortieId());
+
+    //TODO test for legal installation UUID
+    //TODO test for legal message version
+
+    //ObservationHelper helper = new ObservationHelper();
+    //int count = helper.persist(observationRequest);
+    int count = 1;
+
+    SortieResponse1 response = new SortieResponse1();
+    response.setReceipt(UUID.randomUUID().toString());
+    response.setRemoteIpAddress(request.getRemoteAddr());
+    response.setStatus("OK");
+    response.setSortieId(sortieRequest.getSortieId());
+    response.setRowCount(count);
+
+    SortieResponse1.Self self = new SortieResponse1.Self();
     self.setHref(request.getRequestURL().toString());
     response.getLinks().setSelf(self);
 
