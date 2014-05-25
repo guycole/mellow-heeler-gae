@@ -15,6 +15,7 @@ public class RawObservation {
   public static final String PROPERTY_TIME_STAMP_MS = "timeStampMs";
   public static final String PROPERTY_INSTALLATION_UUID = "installationUuid";
   public static final String PROPERTY_LOCATION_UUID = "locationUuid";
+  public static final String PROPERTY_OBSERVATION_UUID = "observationUuid";
   public static final String PROPERTY_SORTIE_UUID = "sortieUuid";
 
   /**
@@ -58,9 +59,14 @@ public class RawObservation {
   private String installationUuid;
 
   /**
-   * row UUID, employed as key
+   * location UUID, employed as key
    */
   private String locationUuid;
+
+  /**
+   * row UUID, employed as key
+   */
+  private String observationUuid;
 
   /**
    * sortie UUID
@@ -137,6 +143,14 @@ public class RawObservation {
 
   public void setLocationUuid(String locationUuid) {
     this.locationUuid = locationUuid;
+  }
+
+  public String getObservationUuid() {
+    return observationUuid;
+  }
+
+  public void setObservationUuid(String observationUuid) {
+    this.observationUuid = observationUuid;
   }
 
   public String getSortieUuid() {

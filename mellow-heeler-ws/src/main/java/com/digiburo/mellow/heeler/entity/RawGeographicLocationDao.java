@@ -53,20 +53,49 @@ public class RawGeographicLocationDao {
 
     PreparedQuery preparedQuery = datastoreService.prepare(query);
     for (Entity entity:preparedQuery.asIterable()) {
-      RawGeographicLocation geographicLocation = new RawGeographicLocation();
-      geographicLocation.setAccuracy((Double) entity.getProperty(RawGeographicLocation.PROPERTY_ACCURACY));
-      geographicLocation.setAltitude((Double) entity.getProperty(RawGeographicLocation.PROPERTY_ALTITUDE));
-      geographicLocation.setLocation((GeoPt) entity.getProperty(RawGeographicLocation.PROPERTY_LOCATION));
-      geographicLocation.setSpecialFlag((Boolean) entity.getProperty(RawGeographicLocation.PROPERTY_SPECIAL_FLAG));
-      geographicLocation.setTimeStamp((String) entity.getProperty(RawGeographicLocation.PROPERTY_TIME_STAMP));
-      geographicLocation.setTimeStampMs((Long) entity.getProperty(RawGeographicLocation.PROPERTY_TIME_STAMP_MS));
-      geographicLocation.setInstallationUuid((String) entity.getProperty(RawGeographicLocation.PROPERTY_INSTALLATION_UUID));
-      geographicLocation.setLocationUuid((String) entity.getProperty(RawGeographicLocation.PROPERTY_LOCATION_UUID));
-      geographicLocation.setSortieUuid((String) entity.getProperty(RawGeographicLocation.PROPERTY_SORTIE_UUID));
-      results.add(geographicLocation);
+      results.add(converter(entity));
     }
 
     return results;
+  }
+
+  /**
+   *
+   * @param uuid
+   * @return
+   */
+  public RawGeographicLocation selectOne(final String uuid) {
+    DatastoreService datastoreService = DatastoreServiceFactory.getDatastoreService();
+
+    Query query = new Query(RawGeographicLocation.ENTITY_NAME);
+    query.setFilter(new Query.FilterPredicate(RawGeographicLocation.PROPERTY_LOCATION_UUID, Query.FilterOperator.EQUAL, uuid));
+
+    RawGeographicLocation result = null;
+    PreparedQuery preparedQuery = datastoreService.prepare(query);
+    for (Entity entity:preparedQuery.asIterable()) {
+      result = converter(entity);
+    }
+
+    return result;
+  }
+
+  /**
+   *
+   * @param entity
+   * @return
+   */
+  private RawGeographicLocation converter(Entity entity) {
+    RawGeographicLocation result = new RawGeographicLocation();
+    result.setAccuracy((Double) entity.getProperty(RawGeographicLocation.PROPERTY_ACCURACY));
+    result.setAltitude((Double) entity.getProperty(RawGeographicLocation.PROPERTY_ALTITUDE));
+    result.setLocation((GeoPt) entity.getProperty(RawGeographicLocation.PROPERTY_LOCATION));
+    result.setSpecialFlag((Boolean) entity.getProperty(RawGeographicLocation.PROPERTY_SPECIAL_FLAG));
+    result.setTimeStamp((String) entity.getProperty(RawGeographicLocation.PROPERTY_TIME_STAMP));
+    result.setTimeStampMs((Long) entity.getProperty(RawGeographicLocation.PROPERTY_TIME_STAMP_MS));
+    result.setInstallationUuid((String) entity.getProperty(RawGeographicLocation.PROPERTY_INSTALLATION_UUID));
+    result.setLocationUuid((String) entity.getProperty(RawGeographicLocation.PROPERTY_LOCATION_UUID));
+    result.setSortieUuid((String) entity.getProperty(RawGeographicLocation.PROPERTY_SORTIE_UUID));
+    return result;
   }
 }
 /*

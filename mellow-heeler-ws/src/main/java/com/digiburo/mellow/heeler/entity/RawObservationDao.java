@@ -33,6 +33,7 @@ public class RawObservationDao {
     entity.setProperty(RawObservation.PROPERTY_TIME_STAMP_MS, arg.getTimeStampMs());
     entity.setProperty(RawObservation.PROPERTY_INSTALLATION_UUID, arg.getInstallationUuid());
     entity.setProperty(RawObservation.PROPERTY_LOCATION_UUID, arg.getLocationUuid());
+    entity.setProperty(RawObservation.PROPERTY_OBSERVATION_UUID, arg.getObservationUuid());
     entity.setProperty(RawObservation.PROPERTY_SORTIE_UUID, arg.getSortieUuid());
 
     datastoreService.put(entity);
@@ -54,21 +55,55 @@ public class RawObservationDao {
 
     PreparedQuery preparedQuery = datastoreService.prepare(query);
     for (Entity entity:preparedQuery.asIterable()) {
-      RawObservation observation = new RawObservation();
-      observation.setBssid((String) entity.getProperty(RawObservation.PROPERTY_BSSID));
-      observation.setSsid((String) entity.getProperty(RawObservation.PROPERTY_SSID));
-      observation.setCapability((String) entity.getProperty(RawObservation.PROPERTY_CAPABILITY));
-      observation.setStrength((Integer) entity.getProperty(RawObservation.PROPERTY_STRENGTH));
-      observation.setTimeStamp((String) entity.getProperty(RawObservation.PROPERTY_TIME_STAMP));
-      observation.setTimeStampMs((Long) entity.getProperty(RawObservation.PROPERTY_TIME_STAMP_MS));
-      observation.setInstallationUuid((String) entity.getProperty(RawObservation.PROPERTY_INSTALLATION_UUID));
-      observation.setLocationUuid((String) entity.getProperty(RawObservation.PROPERTY_LOCATION_UUID));
-      observation.setSortieUuid((String) entity.getProperty(RawObservation.PROPERTY_SORTIE_UUID));
-      results.add(observation);
+      results.add(converter(entity));
     }
 
     return results;
   }
+
+  /**
+   *
+   * @param uuid
+   * @return
+   */
+  public RawObservation selectOne(final String uuid) {
+    DatastoreService datastoreService = DatastoreServiceFactory.getDatastoreService();
+
+    Query query = new Query(RawObservation.ENTITY_NAME);
+    query.setFilter(new Query.FilterPredicate(RawObservation.PROPERTY_OBSERVATION_UUID, Query.FilterOperator.EQUAL, uuid));
+
+    RawObservation result = null;
+    PreparedQuery preparedQuery = datastoreService.prepare(query);
+    for (Entity entity:preparedQuery.asIterable()) {
+      result = converter(entity);
+    }
+
+    return result;
+  }
+
+  /**
+   *
+   * @param entity
+   * @return
+   */
+  private RawObservation converter(Entity entity) {
+    RawObservation result = new RawObservation();
+    result.setBssid((String) entity.getProperty(RawObservation.PROPERTY_BSSID));
+    result.setSsid((String) entity.getProperty(RawObservation.PROPERTY_SSID));
+    result.setCapability((String) entity.getProperty(RawObservation.PROPERTY_CAPABILITY));
+    result.setFrequency((Integer) entity.getProperty(RawObservation.PROPERTY_FREQUENCY));
+    result.setStrength((Integer) entity.getProperty(RawObservation.PROPERTY_STRENGTH));
+    result.setTimeStamp((String) entity.getProperty(RawObservation.PROPERTY_TIME_STAMP));
+    result.setTimeStampMs((Long) entity.getProperty(RawObservation.PROPERTY_TIME_STAMP_MS));
+    result.setInstallationUuid((String) entity.getProperty(RawObservation.PROPERTY_INSTALLATION_UUID));
+    result.setLocationUuid((String) entity.getProperty(RawObservation.PROPERTY_LOCATION_UUID));
+    result.setObservationUuid((String) entity.getProperty(RawObservation.PROPERTY_OBSERVATION_UUID));
+    result.setSortieUuid((String) entity.getProperty(RawObservation.PROPERTY_SORTIE_UUID));
+    return result;
+  }
+
+
+  public static final String PROPERTY_FREQUENCY = "frequency";
 }
 /*
  * Copyright 2014 Digital Burro, INC

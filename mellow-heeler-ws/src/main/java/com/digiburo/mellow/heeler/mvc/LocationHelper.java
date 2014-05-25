@@ -17,8 +17,6 @@ import java.util.logging.Logger;
  *  process a fresh JSON message
  */
 public class LocationHelper {
-
-  //
   private final Logger logger = Logger.getLogger(getClass().getName());
 
   /**
@@ -34,23 +32,29 @@ public class LocationHelper {
 
     GeoLocationList geoLocationList = geoLocationRequest.getLocationList();
     for (GeoLocation geoLocation : geoLocationList) {
-      RawGeographicLocation geographicLocation = new RawGeographicLocation();
-      geographicLocation.setAccuracy(geoLocation.getAccuracy());
-      geographicLocation.setAltitude(geoLocation.getAltitude());
-      geographicLocation.setInstallationUuid(geoLocationRequest.getInstallationId());
-      geographicLocation.setLocation(new GeoPt(geoLocation.getLatitude().floatValue(), geoLocation.getLongitude().floatValue()));
-      geographicLocation.setLocationUuid(geoLocation.getLocationId());
-      geographicLocation.setSpecialFlag(geoLocation.isSpecialFlag());
-      geographicLocation.setSortieUuid(geoLocationRequest.getSortieId());
+      RawGeographicLocation rawGeographicLocation = dao.selectOne(geoLocation.getLocationId());
+      if (rawGeographicLocation == null) {
+        RawGeographicLocation geographicLocation = new RawGeographicLocation();
+        geographicLocation.setAccuracy(geoLocation.getAccuracy());
+        geographicLocation.setAltitude(geoLocation.getAltitude());
+        geographicLocation.setInstallationUuid(geoLocationRequest.getInstallationId());
+        geographicLocation.setLocation(new GeoPt(geoLocation.getLatitude().floatValue(), geoLocation.getLongitude().floatValue()));
+        geographicLocation.setLocationUuid(geoLocation.getLocationId());
+        geographicLocation.setSpecialFlag(geoLocation.isSpecialFlag());
+        geographicLocation.setSortieUuid(geoLocationRequest.getSortieId());
 
-      long timeStampMs = geoLocation.getTimeStampMs();
-      geographicLocation.setTimeStampMs(timeStampMs);
+        long timeStampMs = geoLocation.getTimeStampMs();
+        geographicLocation.setTimeStampMs(timeStampMs);
 
-      SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
-      sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
-      geographicLocation.setTimeStamp(sdf.format(new Date(timeStampMs)));
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+        sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
+        geographicLocation.setTimeStamp(sdf.format(new Date(timeStampMs)));
 
-      dao.save(geographicLocation);
+        dao.save(geographicLocation);
+      } else {
+        logger.info("duplicate location:" + geoLocation.getLocationId());
+      }
+
       ++count;
     }
 

@@ -12,6 +12,16 @@ public class RawSortie {
   public static final String PROPERTY_TIME_STAMP = "timeStamp";
   public static final String PROPERTY_TIME_STAMP_MS = "timeStampMs";
 
+  // reserved reporting flags
+  public static final String PROPERTY_STUNT1 = "stunt1";
+  public static final String PROPERTY_STUNT2 = "stunt2";
+  public static final String PROPERTY_STUNT3 = "stunt3";
+  public static final String PROPERTY_STUNT4 = "stunt4";
+  public static final String PROPERTY_STUNT5 = "stunt5";
+  public static final String PROPERTY_STUNT6 = "stunt6";
+  public static final String PROPERTY_STUNT7 = "stunt7";
+  public static final String PROPERTY_STUNT8 = "stunt8";
+
   /**
    * location time as String
    */
@@ -36,6 +46,18 @@ public class RawSortie {
    * sortie UUID
    */
   private String sortieUuid;
+
+  /**
+   * reserved reporting flags
+   */
+  private Boolean stunt1 = false;
+  private Boolean stunt2 = false;
+  private Boolean stunt3 = false;
+  private Boolean stunt4 = false;
+  private Boolean stunt5 = false;
+  private Boolean stunt6 = false;
+  private Boolean stunt7 = false;
+  private Boolean stunt8 = false;
 
   public String getTimeStamp() {
     return timeStamp;
@@ -75,6 +97,70 @@ public class RawSortie {
 
   public void setSortieName(String arg) {
     sortieName = arg;
+  }
+
+  public Boolean isStunt1() {
+    return stunt1;
+  }
+
+  public void setStunt1(Boolean stunt1) {
+    this.stunt1 = stunt1;
+  }
+
+  public Boolean isStunt2() {
+    return stunt2;
+  }
+
+  public void setStunt2(Boolean stunt2) {
+    this.stunt2 = stunt2;
+  }
+
+  public Boolean isStunt3() {
+    return stunt3;
+  }
+
+  public void setStunt3(Boolean stunt3) {
+    this.stunt3 = stunt3;
+  }
+
+  public Boolean isStunt4() {
+    return stunt4;
+  }
+
+  public void setStunt4(Boolean stunt4) {
+    this.stunt4 = stunt4;
+  }
+
+  public Boolean isStunt5() {
+    return stunt5;
+  }
+
+  public void setStunt5(Boolean stunt5) {
+    this.stunt5 = stunt5;
+  }
+
+  public Boolean isStunt6() {
+    return stunt6;
+  }
+
+  public void setStunt6(Boolean stunt6) {
+    this.stunt6 = stunt6;
+  }
+
+  public Boolean isStunt7() {
+    return stunt7;
+  }
+
+  public void setStunt7(Boolean stunt7) {
+    this.stunt7 = stunt7;
+  }
+
+  public Boolean isStunt8() {
+    return stunt8;
+  }
+
+  public void setStunt8(Boolean stunt8) {
+    this.stunt8 = stunt8;
   }
 }
 /*

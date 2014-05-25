@@ -16,6 +16,7 @@ public class Observation {
   private Long timeStampMs;
   private Date timeStamp = new Date();
   private String locationId;
+  private String observationId;
 
   public String getSsid() {
     return ssid;
@@ -80,6 +81,14 @@ public class Observation {
 
   public void setLocationId(String arg) {
     locationId = arg;
+  }
+
+  public String getObservationId() {
+    return observationId;
+  }
+
+  public void setObservationId(String arg) {
+    observationId = arg;
   }
 }
 /*
