@@ -18,7 +18,7 @@ public class RawObservationDao {
    * persist a single entity
    * @param arg
    */
-  public void save(RawObservation arg) {
+  public void save(final RawObservation arg) {
     DatastoreService datastoreService = DatastoreServiceFactory.getDatastoreService();
 
     //TODO test for null/bad fields
@@ -101,9 +101,6 @@ public class RawObservationDao {
     result.setSortieUuid((String) entity.getProperty(RawObservation.PROPERTY_SORTIE_UUID));
     return result;
   }
-
-
-  public static final String PROPERTY_FREQUENCY = "frequency";
 }
 /*
  * Copyright 2014 Digital Burro, INC

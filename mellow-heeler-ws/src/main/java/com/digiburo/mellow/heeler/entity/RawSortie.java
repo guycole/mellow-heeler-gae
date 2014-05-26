@@ -59,6 +59,8 @@ public class RawSortie {
   private Boolean stunt7 = false;
   private Boolean stunt8 = false;
 
+  //////////////////////////////
+
   public String getTimeStamp() {
     return timeStamp;
   }
