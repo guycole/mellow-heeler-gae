@@ -36,12 +36,12 @@ public class RawObservation {
   /**
    * observed center frequency
    */
-  private Integer frequency;
+  private Long frequency;
 
   /**
    * observed signal strength
    */
-  private Integer strength;
+  private Long strength;
 
   /**
    * location time as String
@@ -97,19 +97,19 @@ public class RawObservation {
     this.capability = capability;
   }
 
-  public Integer getFrequency() {
+  public Long getFrequency() {
     return frequency;
   }
 
-  public void setFrequency(Integer frequency) {
+  public void setFrequency(long frequency) {
     this.frequency = frequency;
   }
 
-  public Integer getStrength() {
+  public Long getStrength() {
     return strength;
   }
 
-  public void setStrength(Integer strength) {
+  public void setStrength(long strength) {
     this.strength = strength;
   }
 
@@ -125,7 +125,7 @@ public class RawObservation {
     return timeStampMs;
   }
 
-  public void setTimeStampMs(Long timeStampMs) {
+  public void setTimeStampMs(long timeStampMs) {
     this.timeStampMs = timeStampMs;
   }
 

@@ -73,7 +73,7 @@ public class RawSortie {
     return timeStampMs;
   }
 
-  public void setTimeStampMs(Long timeStampMs) {
+  public void setTimeStampMs(long timeStampMs) {
     this.timeStampMs = timeStampMs;
   }
 
@@ -105,7 +105,7 @@ public class RawSortie {
     return stunt1;
   }
 
-  public void setStunt1(Boolean stunt1) {
+  public void setStunt1(boolean stunt1) {
     this.stunt1 = stunt1;
   }
 
@@ -113,7 +113,7 @@ public class RawSortie {
     return stunt2;
   }
 
-  public void setStunt2(Boolean stunt2) {
+  public void setStunt2(boolean stunt2) {
     this.stunt2 = stunt2;
   }
 
@@ -121,7 +121,7 @@ public class RawSortie {
     return stunt3;
   }
 
-  public void setStunt3(Boolean stunt3) {
+  public void setStunt3(boolean stunt3) {
     this.stunt3 = stunt3;
   }
 
@@ -129,7 +129,7 @@ public class RawSortie {
     return stunt4;
   }
 
-  public void setStunt4(Boolean stunt4) {
+  public void setStunt4(boolean stunt4) {
     this.stunt4 = stunt4;
   }
 
@@ -137,7 +137,7 @@ public class RawSortie {
     return stunt5;
   }
 
-  public void setStunt5(Boolean stunt5) {
+  public void setStunt5(boolean stunt5) {
     this.stunt5 = stunt5;
   }
 
@@ -145,7 +145,7 @@ public class RawSortie {
     return stunt6;
   }
 
-  public void setStunt6(Boolean stunt6) {
+  public void setStunt6(boolean stunt6) {
     this.stunt6 = stunt6;
   }
 
@@ -153,7 +153,7 @@ public class RawSortie {
     return stunt7;
   }
 
-  public void setStunt7(Boolean stunt7) {
+  public void setStunt7(boolean stunt7) {
     this.stunt7 = stunt7;
   }
 
@@ -161,7 +161,7 @@ public class RawSortie {
     return stunt8;
   }
 
-  public void setStunt8(Boolean stunt8) {
+  public void setStunt8(boolean stunt8) {
     this.stunt8 = stunt8;
   }
 }

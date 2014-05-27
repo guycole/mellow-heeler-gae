@@ -69,7 +69,7 @@ public class RawGeographicLocation {
     return accuracy;
   }
 
-  public void setAccuracy(Double accuracy) {
+  public void setAccuracy(double accuracy) {
     this.accuracy = accuracy;
   }
 
@@ -77,7 +77,7 @@ public class RawGeographicLocation {
     return altitude;
   }
 
-  public void setAltitude(Double altitude) {
+  public void setAltitude(double altitude) {
     this.altitude = altitude;
   }
 
@@ -93,7 +93,7 @@ public class RawGeographicLocation {
     return specialFlag;
   }
 
-  public void setSpecialFlag(Boolean flag) {
+  public void setSpecialFlag(boolean flag) {
     specialFlag = flag;
   }
 
@@ -109,7 +109,7 @@ public class RawGeographicLocation {
     return timeStampMs;
   }
 
-  public void setTimeStampMs(Long timeStampMs) {
+  public void setTimeStampMs(long timeStampMs) {
     this.timeStampMs = timeStampMs;
   }
 

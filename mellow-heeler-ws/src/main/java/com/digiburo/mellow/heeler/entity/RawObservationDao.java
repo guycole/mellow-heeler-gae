@@ -91,8 +91,8 @@ public class RawObservationDao {
     result.setBssid((String) entity.getProperty(RawObservation.PROPERTY_BSSID));
     result.setSsid((String) entity.getProperty(RawObservation.PROPERTY_SSID));
     result.setCapability((String) entity.getProperty(RawObservation.PROPERTY_CAPABILITY));
-    result.setFrequency((Integer) entity.getProperty(RawObservation.PROPERTY_FREQUENCY));
-    result.setStrength((Integer) entity.getProperty(RawObservation.PROPERTY_STRENGTH));
+    result.setFrequency((Long) entity.getProperty(RawObservation.PROPERTY_FREQUENCY));
+    result.setStrength((Long) entity.getProperty(RawObservation.PROPERTY_STRENGTH));
     result.setTimeStamp((String) entity.getProperty(RawObservation.PROPERTY_TIME_STAMP));
     result.setTimeStampMs((Long) entity.getProperty(RawObservation.PROPERTY_TIME_STAMP_MS));
     result.setInstallationUuid((String) entity.getProperty(RawObservation.PROPERTY_INSTALLATION_UUID));

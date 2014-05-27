@@ -45,7 +45,7 @@ public class ApplicationLog {
     return timeStampMs;
   }
 
-  public void setTimeStampMs(Long timeStampMs) {
+  public void setTimeStampMs(long timeStampMs) {
     this.timeStampMs = timeStampMs;
   }
 }
