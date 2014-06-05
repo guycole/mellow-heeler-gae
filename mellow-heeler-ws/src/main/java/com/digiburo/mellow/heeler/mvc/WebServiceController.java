@@ -1,7 +1,6 @@
 package com.digiburo.mellow.heeler.mvc;
 
-import com.digiburo.mellow.heeler.entity.ApplicationLog;
-import com.digiburo.mellow.heeler.entity.ApplicationLogDao;
+import com.digiburo.mellow.heeler.dao.ApplicationLogDao;
 import com.digiburo.mellow.heeler.entity.Authorization;
 import com.digiburo.mellow.heeler.entity.AuthorizationDao;
 import com.digiburo.mellow.heeler.entity.ReceiptDao;
@@ -21,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.UUID;
 import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;

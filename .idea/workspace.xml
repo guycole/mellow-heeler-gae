@@ -2,32 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8fa9396-794a-4456-9012-658349b7e7ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/entity/ApplicationLogTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/entity/GeographicLocationTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_appengine_appengine_api_stubs_1_9_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_all_1_9_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/entity/ObservationTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/SortieDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/entity/SortieTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/RawSortieDao.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_appengine_appengine_api_1_0_sdk_1_8_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_appengine_appengine_testing_1_9_5.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/RawGeographicLocation.java" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/GeographicLocation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/RawObservation.java" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/Observation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/RawSortie.java" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/Sortie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/ApplicationLog.java" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/ApplicationLog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/ApplicationLogDao.java" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/ApplicationLogDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/mvc/LocationHelper.java" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/mvc/LocationHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/mvc/ObservationHelper.java" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/mvc/ObservationHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/RawGeographicLocationDao.java" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/RawGeographicLocationDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/RawObservationDao.java" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/RawObservationDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/mvc/SortieHelper.java" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/mvc/SortieHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mellow-heeler-ws/mellow-heeler-ws.iml" afterPath="$PROJECT_DIR$/mellow-heeler-ws/mellow-heeler-ws.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/mellow_heeler_ws_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/mellow_heeler_ws_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mellow-heeler-ws/pom.xml" afterPath="$PROJECT_DIR$/mellow-heeler-ws/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/dao/ApplicationLogDaoTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/entity/AuthorizationTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/entity/ReceiptTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/ApplicationLogDao.java" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/dao/ApplicationLogDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/Authorization.java" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/Authorization.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/Receipt.java" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/Receipt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/ReceiptDao.java" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/ReceiptDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/mvc/WebServiceController.java" afterPath="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/mvc/WebServiceController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mellow-heeler-gae.iws" />
@@ -82,15 +64,26 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
+    <ui_properties converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="mellow-heeler-gae" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="ApplicationLogDaoTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/dao/ApplicationLogDaoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.10901163" vertical-offset="0" max-vertical-offset="688">
+              <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -111,8 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/json/ObservationRequest.java" />
-        <option value="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/json/GeoLocationRequest.java" />
         <option value="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/json/AuthorizeResponse.java" />
         <option value="$PROJECT_DIR$/mellow-heeler-ws/curl/local_location.sh" />
         <option value="$PROJECT_DIR$/mellow-heeler-ws/curl/local_authorize.sh" />
@@ -137,9 +128,6 @@
         <option value="$PROJECT_DIR$/mellow-heeler-ws/curl/remote_observation.sh" />
         <option value="$PROJECT_DIR$/mellow-heeler-ws/curl/remote_sortie.sh" />
         <option value="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/MessageReceipt.java" />
-        <option value="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/Receipt.java" />
-        <option value="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/ReceiptDao.java" />
-        <option value="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/Authorization.java" />
         <option value="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/AuthorizationDao.java" />
         <option value="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/mvc/WebServiceController.java" />
         <option value="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/RawGeographicLocation.java" />
@@ -162,6 +150,11 @@
         <option value="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/Observation.java" />
         <option value="$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/entity/SortieTest.java" />
         <option value="$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/entity/ObservationTest.java" />
+        <option value="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/Authorization.java" />
+        <option value="$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/entity/AuthorizationTest.java" />
+        <option value="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/ReceiptDao.java" />
+        <option value="$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/Receipt.java" />
+        <option value="$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/entity/ReceiptTest.java" />
       </list>
     </option>
   </component>
@@ -220,7 +213,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
+    <option name="x" value="470" />
+    <option name="y" value="52" />
     <option name="width" value="1427" />
     <option name="height" value="806" />
   </component>
@@ -250,6 +244,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -343,6 +339,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mellow-heeler-gae" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mellow-heeler-gae" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mellow-heeler-ws" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="heeler" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -499,15 +529,43 @@
               <option name="myItemId" value="heeler" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="diagnostic" />
+              <option name="myItemId" value="mellow-heeler-gae" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mellow-heeler-gae" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mellow-heeler-ws" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="heeler" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -539,6 +597,9 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/mellow-heeler-ws/curl" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.digiburo.mellow.heeler.dao" />
     </key>
   </component>
   <component name="RunManager" selected="Google AppEngine Dev Server.AppEngine Dev 1.9.5">
@@ -847,14 +908,17 @@
       <workItem from="1401945373034" duration="1487000" />
       <workItem from="1401948283375" duration="2126000" />
       <workItem from="1401950494530" duration="432000" />
+      <workItem from="1401951396444" duration="732000" />
+      <workItem from="1401952131303" duration="1431000" />
+      <workItem from="1401954020141" duration="125000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67619000" />
+    <option name="totallyTimeSpent" value="69907000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1427" height="806" extended-state="0" />
+    <frame x="470" y="52" width="1427" height="806" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -872,30 +936,30 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33193278" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18339351" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16173285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33066133" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24187726" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32633054" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24187726" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32402235" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33193278" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -914,8 +978,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33119658" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -945,27 +1009,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/GeographicLocation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="1800">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/RawGeographicLocationDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="125" max-vertical-offset="1095">
-          <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/json/GeoLocationRequest1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="825">
-          <caret line="12" column="92" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/main/webapp/WEB-INF/appengine-web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="641">
@@ -1142,20 +1185,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/ReceiptDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9230769" vertical-offset="0" max-vertical-offset="1035">
-          <caret line="67" column="36" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/Authorization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/mvc/WebServiceController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2655" max-vertical-offset="3660">
@@ -1245,7 +1274,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/ApplicationLogDao.java">
+    <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/dao/ApplicationLogDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.95353985" vertical-offset="139" max-vertical-offset="825">
           <caret line="47" column="2" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="2" />
@@ -1258,15 +1287,41 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="206" max-vertical-offset="915">
           <caret line="41" column="86" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/entity/ObservationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9933775" vertical-offset="0" max-vertical-offset="2655">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/ApplicationLog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="227" max-vertical-offset="915">
+          <caret line="41" column="46" selection-start-line="30" selection-start-column="0" selection-end-line="41" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/Authorization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="242" max-vertical-offset="1410">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/GeographicLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2175">
+          <caret line="142" column="20" selection-start-line="126" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1284,44 +1339,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/entity/ObservationTest.java">
+    <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/entity/AuthorizationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9933775" vertical-offset="0" max-vertical-offset="2655">
-          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="1.6569767" vertical-offset="0" max-vertical-offset="1260">
+          <caret line="81" column="35" selection-start-line="81" selection-start-column="3" selection-end-line="81" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/ReceiptDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16553289" vertical-offset="362" max-vertical-offset="1035">
+          <caret line="40" column="69" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/Receipt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0066225166" vertical-offset="927" max-vertical-offset="1380">
-          <caret line="71" column="16" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/entity/SortieTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34657836" vertical-offset="128" max-vertical-offset="2355">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2115">
+          <caret line="17" column="79" selection-start-line="9" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/Sortie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69536424" vertical-offset="465" max-vertical-offset="2640">
-          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1376" max-vertical-offset="2640">
+          <caret line="126" column="38" selection-start-line="111" selection-start-column="0" selection-end-line="126" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/main/java/com/digiburo/mellow/heeler/entity/GeographicLocation.java">
+    <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/entity/SortieTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.7748344" vertical-offset="90" max-vertical-offset="2175">
-          <caret line="142" column="20" selection-start-line="126" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="953" max-vertical-offset="2355">
+          <caret line="95" column="9" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/entity/ReceiptTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7659883" vertical-offset="0" max-vertical-offset="1785">
+          <caret line="86" column="85" selection-start-line="86" selection-start-column="3" selection-end-line="86" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mellow-heeler-ws/src/test/java/com/digiburo/mellow/heeler/dao/ApplicationLogDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10901163" vertical-offset="0" max-vertical-offset="688">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
           <folding />
         </state>
       </provider>

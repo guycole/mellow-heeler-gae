@@ -1,5 +1,7 @@
 package com.digiburo.mellow.heeler.entity;
 
+import java.util.Date;
+
 /**
  * log entity
  */
@@ -10,10 +12,11 @@ public class Receipt {
   public static final String PROPERTY_MESSAGE_TYPE = "messageType";
   public static final String PROPERTY_NOTE = "note";
   public static final String PROPERTY_TIME_STAMP = "timeStamp";
-  public static final String PROPERTY_TIME_STAMP_MS = "timeStampMs";
 
   public static final String PROPERTY_INSTALLATION_UUID = "installationUuid";
   public static final String PROPERTY_RECEIPT_UUID = "receiptUuid";
+
+  public static final String DEFAULT_NOTE = "No Note";
 
   /**
    * client IP address
@@ -28,17 +31,12 @@ public class Receipt {
   /**
    * free form note
    */
-  private String note;
-
-  /**
-   * location time as String
-   */
-  private String timeStamp;
+  private String note = DEFAULT_NOTE;
 
   /**
    * location time in UTC
    */
-  private Long timeStampMs;
+  private Date timeStamp;
 
   /**
    * installation UUID
@@ -57,7 +55,15 @@ public class Receipt {
   }
 
   public void setIpAddress(String arg) {
-    ipAddress = arg;
+    if (arg == null) {
+      throw new NullPointerException("null address");
+    }
+
+    ipAddress = arg.trim();
+
+    if (ipAddress.isEmpty()) {
+      throw new IllegalArgumentException("empty address");
+    }
   }
 
   public String getMessageType() {
@@ -65,7 +71,15 @@ public class Receipt {
   }
 
   public void setMessageType(String arg) {
-    messageType = arg;
+    if (arg == null) {
+      throw new NullPointerException("null message type");
+    }
+
+    messageType = arg.trim();
+
+    if (messageType.isEmpty()) {
+      throw new IllegalArgumentException("empty message type");
+    }
   }
 
   public String getNote() {
@@ -73,23 +87,27 @@ public class Receipt {
   }
 
   public void setNote(String arg) {
-    note = arg;
+    if (arg == null) {
+      throw new NullPointerException("null note");
+    }
+
+    note = arg.trim();
+
+    if (note.isEmpty()) {
+      throw new IllegalArgumentException("empty note");
+    }
   }
 
-  public String getTimeStamp() {
+  public Date getTimeStamp() {
     return timeStamp;
   }
 
-  public void setTimeStamp(String timeStamp) {
+  public void setTimeStamp(Date timeStamp) {
+    if (timeStamp == null) {
+      throw new NullPointerException("null timeStamp");
+    }
+
     this.timeStamp = timeStamp;
-  }
-
-  public Long getTimeStampMs() {
-    return timeStampMs;
-  }
-
-  public void setTimeStampMs(Long timeStampMs) {
-    this.timeStampMs = timeStampMs;
   }
 
   public String getInstallationUuid() {
@@ -97,7 +115,15 @@ public class Receipt {
   }
 
   public void setInstallationUuid(String installationUuid) {
-    this.installationUuid = installationUuid;
+    if (installationUuid == null) {
+      throw new NullPointerException("null installationUuid");
+    }
+
+    this.installationUuid = installationUuid.trim();
+
+    if (installationUuid.isEmpty()) {
+      throw new IllegalArgumentException("empty installationUuid");
+    }
   }
 
   public String getReceiptUuid() {
@@ -105,7 +131,15 @@ public class Receipt {
   }
 
   public void setReceiptUuid(String receiptUuid) {
-    this.receiptUuid = receiptUuid;
+    if (receiptUuid == null) {
+      throw new NullPointerException("null receiptUuid");
+    }
+
+    this.receiptUuid = receiptUuid.trim();
+
+    if (receiptUuid.isEmpty()) {
+      throw new IllegalArgumentException("empty receiptUuid");
+    }
   }
 }
 /*

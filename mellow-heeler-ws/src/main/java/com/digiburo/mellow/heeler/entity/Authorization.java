@@ -11,6 +11,9 @@ public class Authorization {
   public static final String PROPERTY_NAME = "name";
   public static final String PROPERTY_NOTE = "note";
 
+  public static final String DEFAULT_NAME = "No Name";
+  public static final String DEFAULT_NOTE = "No Note";
+
   /**
    * true, active legal user
    */
@@ -24,12 +27,12 @@ public class Authorization {
   /**
    * client name
    */
-  private String name = "No Name";
+  private String name = DEFAULT_NAME;
 
   /**
    * free form note
    */
-  private String note = "No Note";
+  private String note = DEFAULT_NOTE;
 
   ////////////////
 
@@ -46,23 +49,47 @@ public class Authorization {
   }
 
   public void setInstallationUuid(String installationUuid) {
-    this.installationUuid = installationUuid;
+    if (installationUuid == null) {
+      throw new NullPointerException("null installationUuid");
+    }
+
+    this.installationUuid = installationUuid.trim();
+
+    if (installationUuid.isEmpty()) {
+      throw new IllegalArgumentException("empty installationUuid");
+    }
   }
 
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setName(String arg) {
+    if (arg == null) {
+      throw new NullPointerException("null sortie name");
+    }
+
+    name = arg.trim();
+
+    if (name.isEmpty()) {
+      throw new IllegalArgumentException("empty sortie name");
+    }
   }
 
   public String getNote() {
     return note;
   }
 
-  public void setNote(String note) {
-    this.note = note;
+  public void setNote(String arg) {
+    if (arg == null) {
+      throw new NullPointerException("null note");
+    }
+
+    note = arg.trim();
+
+    if (note.isEmpty()) {
+      throw new IllegalArgumentException("empty note");
+    }
   }
 }
 /*

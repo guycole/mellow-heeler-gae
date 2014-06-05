@@ -32,7 +32,7 @@ public class ReceiptDao {
     entity.setProperty(Receipt.PROPERTY_MESSAGE_TYPE, arg.getMessageType());
     entity.setProperty(Receipt.PROPERTY_NOTE, arg.getNote());
     entity.setProperty(Receipt.PROPERTY_TIME_STAMP, arg.getTimeStamp());
-    entity.setProperty(Receipt.PROPERTY_TIME_STAMP_MS, arg.getTimeStampMs());
+//    entity.setProperty(Receipt.PROPERTY_TIME_STAMP_MS, arg.getTimeStampMs());
     entity.setProperty(Receipt.PROPERTY_INSTALLATION_UUID, arg.getInstallationUuid());
     entity.setProperty(Receipt.PROPERTY_RECEIPT_UUID, arg.getReceiptUuid());
 
@@ -52,11 +52,11 @@ public class ReceiptDao {
     receipt.setReceiptUuid(UUID.randomUUID().toString());
 
     Date date = new Date();
-    receipt.setTimeStampMs(date.getTime());
+//    receipt.setTimeStampMs(date.getTime());
 
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
     sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
-    receipt.setTimeStamp(sdf.format(date));
+//    receipt.setTimeStamp(sdf.format(date));
 
     receipt.setIpAddress(ipAddress);
     receipt.setInstallationUuid(installationUuid);
