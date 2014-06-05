@@ -19,20 +19,20 @@ public class RawGeographicLocationDao {
    * persist a single entity
    * @param arg
    */
-  public void save(RawGeographicLocation arg) {
+  public void save(GeographicLocation arg) {
     DatastoreService datastoreService = DatastoreServiceFactory.getDatastoreService();
 
     //TODO test for null/bad fields
-    Entity entity = new Entity(RawGeographicLocation.ENTITY_NAME);
-    entity.setProperty(RawGeographicLocation.PROPERTY_ACCURACY, arg.getAccuracy());
-    entity.setProperty(RawGeographicLocation.PROPERTY_ALTITUDE, arg.getAltitude());
-    entity.setProperty(RawGeographicLocation.PROPERTY_LOCATION, arg.getLocation());
-    entity.setProperty(RawGeographicLocation.PROPERTY_SPECIAL_FLAG, arg.isSpecialFlag());
-    entity.setProperty(RawGeographicLocation.PROPERTY_TIME_STAMP, arg.getTimeStamp());
-    entity.setProperty(RawGeographicLocation.PROPERTY_TIME_STAMP_MS, arg.getTimeStampMs());
-    entity.setProperty(RawGeographicLocation.PROPERTY_INSTALLATION_UUID, arg.getInstallationUuid());
-    entity.setProperty(RawGeographicLocation.PROPERTY_LOCATION_UUID, arg.getLocationUuid());
-    entity.setProperty(RawGeographicLocation.PROPERTY_SORTIE_UUID, arg.getSortieUuid());
+    Entity entity = new Entity(GeographicLocation.ENTITY_NAME);
+    entity.setProperty(GeographicLocation.PROPERTY_ACCURACY, arg.getAccuracy());
+    entity.setProperty(GeographicLocation.PROPERTY_ALTITUDE, arg.getAltitude());
+    entity.setProperty(GeographicLocation.PROPERTY_LOCATION, arg.getLocation());
+    entity.setProperty(GeographicLocation.PROPERTY_SPECIAL_FLAG, arg.isSpecialFlag());
+ //   entity.setProperty(GeographicLocation.PROPERTY_TIME_STAMP, arg.getTimeStamp());
+ //   entity.setProperty(GeographicLocation.PROPERTY_TIME_STAMP_MS, arg.getTimeStampMs());
+    entity.setProperty(GeographicLocation.PROPERTY_INSTALLATION_UUID, arg.getInstallationUuid());
+    entity.setProperty(GeographicLocation.PROPERTY_LOCATION_UUID, arg.getLocationUuid());
+    entity.setProperty(GeographicLocation.PROPERTY_SORTIE_UUID, arg.getSortieUuid());
 
     datastoreService.put(entity);
   }
@@ -42,14 +42,14 @@ public class RawGeographicLocationDao {
    * @param arg
    * @return
    */
-  public List<RawGeographicLocation> selectBySortie(String arg) {
-    ArrayList<RawGeographicLocation> results = new ArrayList<RawGeographicLocation>();
+  public List<GeographicLocation> selectBySortie(String arg) {
+    ArrayList<GeographicLocation> results = new ArrayList<GeographicLocation>();
 
     DatastoreService datastoreService = DatastoreServiceFactory.getDatastoreService();
 
-    Query query = new Query(RawGeographicLocation.ENTITY_NAME);
-    query.setFilter(new Query.FilterPredicate(RawGeographicLocation.PROPERTY_SORTIE_UUID, Query.FilterOperator.EQUAL, arg));
-    query.addSort(RawGeographicLocation.PROPERTY_TIME_STAMP_MS);
+    Query query = new Query(GeographicLocation.ENTITY_NAME);
+    query.setFilter(new Query.FilterPredicate(GeographicLocation.PROPERTY_SORTIE_UUID, Query.FilterOperator.EQUAL, arg));
+//    query.addSort(GeographicLocation.PROPERTY_TIME_STAMP_MS);
 
     PreparedQuery preparedQuery = datastoreService.prepare(query);
     for (Entity entity:preparedQuery.asIterable()) {
@@ -64,13 +64,13 @@ public class RawGeographicLocationDao {
    * @param uuid
    * @return
    */
-  public RawGeographicLocation selectOne(final String uuid) {
+  public GeographicLocation selectOne(final String uuid) {
     DatastoreService datastoreService = DatastoreServiceFactory.getDatastoreService();
 
-    Query query = new Query(RawGeographicLocation.ENTITY_NAME);
-    query.setFilter(new Query.FilterPredicate(RawGeographicLocation.PROPERTY_LOCATION_UUID, Query.FilterOperator.EQUAL, uuid));
+    Query query = new Query(GeographicLocation.ENTITY_NAME);
+    query.setFilter(new Query.FilterPredicate(GeographicLocation.PROPERTY_LOCATION_UUID, Query.FilterOperator.EQUAL, uuid));
 
-    RawGeographicLocation result = null;
+    GeographicLocation result = null;
     PreparedQuery preparedQuery = datastoreService.prepare(query);
     for (Entity entity:preparedQuery.asIterable()) {
       result = converter(entity);
@@ -84,17 +84,17 @@ public class RawGeographicLocationDao {
    * @param entity
    * @return
    */
-  private RawGeographicLocation converter(Entity entity) {
-    RawGeographicLocation result = new RawGeographicLocation();
-    result.setAccuracy((Double) entity.getProperty(RawGeographicLocation.PROPERTY_ACCURACY));
-    result.setAltitude((Double) entity.getProperty(RawGeographicLocation.PROPERTY_ALTITUDE));
-    result.setLocation((GeoPt) entity.getProperty(RawGeographicLocation.PROPERTY_LOCATION));
-    result.setSpecialFlag((Boolean) entity.getProperty(RawGeographicLocation.PROPERTY_SPECIAL_FLAG));
-    result.setTimeStamp((String) entity.getProperty(RawGeographicLocation.PROPERTY_TIME_STAMP));
-    result.setTimeStampMs((Long) entity.getProperty(RawGeographicLocation.PROPERTY_TIME_STAMP_MS));
-    result.setInstallationUuid((String) entity.getProperty(RawGeographicLocation.PROPERTY_INSTALLATION_UUID));
-    result.setLocationUuid((String) entity.getProperty(RawGeographicLocation.PROPERTY_LOCATION_UUID));
-    result.setSortieUuid((String) entity.getProperty(RawGeographicLocation.PROPERTY_SORTIE_UUID));
+  private GeographicLocation converter(Entity entity) {
+    GeographicLocation result = new GeographicLocation();
+    result.setAccuracy((Double) entity.getProperty(GeographicLocation.PROPERTY_ACCURACY));
+    result.setAltitude((Double) entity.getProperty(GeographicLocation.PROPERTY_ALTITUDE));
+    result.setLocation((GeoPt) entity.getProperty(GeographicLocation.PROPERTY_LOCATION));
+    result.setSpecialFlag((Boolean) entity.getProperty(GeographicLocation.PROPERTY_SPECIAL_FLAG));
+//    result.setTimeStamp((String) entity.getProperty(GeographicLocation.PROPERTY_TIME_STAMP));
+//    result.setTimeStampMs((Long) entity.getProperty(GeographicLocation.PROPERTY_TIME_STAMP_MS));
+    result.setInstallationUuid((String) entity.getProperty(GeographicLocation.PROPERTY_INSTALLATION_UUID));
+    result.setLocationUuid((String) entity.getProperty(GeographicLocation.PROPERTY_LOCATION_UUID));
+    result.setSortieUuid((String) entity.getProperty(GeographicLocation.PROPERTY_SORTIE_UUID));
     return result;
   }
 }

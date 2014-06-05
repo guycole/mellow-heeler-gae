@@ -1,7 +1,7 @@
 package com.digiburo.mellow.heeler.mvc;
 
-import com.digiburo.mellow.heeler.entity.RawSortie;
-import com.digiburo.mellow.heeler.entity.RawSortieDao;
+import com.digiburo.mellow.heeler.entity.Sortie;
+import com.digiburo.mellow.heeler.entity.SortieDao;
 import com.digiburo.mellow.heeler.json.SortieRequest1;
 
 import java.text.SimpleDateFormat;
@@ -23,23 +23,23 @@ public class SortieHelper {
   public int persist(SortieRequest1 sortieRequest) {
     logger.info("persist");
 
-    RawSortieDao dao = new RawSortieDao();
-    RawSortie rawSortie = dao.selectOne(sortieRequest.getSortieId());
+    SortieDao dao = new SortieDao();
+    Sortie sortie = dao.selectOne(sortieRequest.getSortieId());
 
-    if (rawSortie == null) {
-      rawSortie = new RawSortie();
-      rawSortie.setSortieName(sortieRequest.getSortieName());
-      rawSortie.setSortieUuid(sortieRequest.getSortieId());
-      rawSortie.setInstallationUuid(sortieRequest.getInstallationId());
+    if (sortie == null) {
+      sortie = new Sortie();
+      sortie.setName(sortieRequest.getSortieName());
+      sortie.setSortieUuid(sortieRequest.getSortieId());
+      sortie.setInstallationUuid(sortieRequest.getInstallationId());
 
       long timeStampMs = sortieRequest.getTimeStampMs();
-      rawSortie.setTimeStampMs(timeStampMs);
+//      sortie.setTimeStampMs(timeStampMs);
 
       SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
       sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
-      rawSortie.setTimeStamp(sdf.format(new Date(timeStampMs)));
+//      sortie.setTimeStamp(sdf.format(new Date(timeStampMs)));
 
-      dao.save(rawSortie);
+      dao.save(sortie);
     } else {
       logger.info("duplicate sortie:" + sortieRequest.getSortieId());
     }

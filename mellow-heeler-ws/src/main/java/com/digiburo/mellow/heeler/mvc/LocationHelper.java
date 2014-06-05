@@ -1,6 +1,6 @@
 package com.digiburo.mellow.heeler.mvc;
 
-import com.digiburo.mellow.heeler.entity.RawGeographicLocation;
+import com.digiburo.mellow.heeler.entity.GeographicLocation;
 import com.digiburo.mellow.heeler.entity.RawGeographicLocationDao;
 import com.digiburo.mellow.heeler.json.GeoLocation;
 import com.digiburo.mellow.heeler.json.GeoLocationList;
@@ -32,9 +32,9 @@ public class LocationHelper {
 
     GeoLocationList geoLocationList = geoLocationRequest.getLocationList();
     for (GeoLocation geoLocation : geoLocationList) {
-      RawGeographicLocation rawGeographicLocation = dao.selectOne(geoLocation.getLocationId());
+      GeographicLocation rawGeographicLocation = dao.selectOne(geoLocation.getLocationId());
       if (rawGeographicLocation == null) {
-        RawGeographicLocation geographicLocation = new RawGeographicLocation();
+        GeographicLocation geographicLocation = new GeographicLocation();
         geographicLocation.setAccuracy(geoLocation.getAccuracy());
         geographicLocation.setAltitude(geoLocation.getAltitude());
         geographicLocation.setInstallationUuid(geoLocationRequest.getInstallationId());
@@ -44,11 +44,11 @@ public class LocationHelper {
         geographicLocation.setSortieUuid(geoLocationRequest.getSortieId());
 
         long timeStampMs = geoLocation.getTimeStampMs();
-        geographicLocation.setTimeStampMs(timeStampMs);
+  //      geographicLocation.setTimeStampMs(timeStampMs);
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
         sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
-        geographicLocation.setTimeStamp(sdf.format(new Date(timeStampMs)));
+  //      geographicLocation.setTimeStamp(sdf.format(new Date(timeStampMs)));
 
         dao.save(geographicLocation);
       } else {
@@ -66,7 +66,7 @@ public class LocationHelper {
    * @param arg
    * @return
    */
-  public List<RawGeographicLocation> selectBySortie(String arg) {
+  public List<GeographicLocation> selectBySortie(String arg) {
     RawGeographicLocationDao dao = new RawGeographicLocationDao();
     return dao.selectBySortie(arg);
   }

@@ -27,7 +27,7 @@ public class ApplicationLogDao {
     Entity entity = new Entity(ApplicationLog.ENTITY_NAME);
 
     entity.setProperty(ApplicationLog.PROPERTY_TIME_STAMP, arg.getTimeStamp());
-    entity.setProperty(ApplicationLog.PROPERTY_TIME_STAMP_MS, arg.getTimeStampMs());
+ //   entity.setProperty(ApplicationLog.PROPERTY_TIME_STAMP_MS, arg.getTimeStampMs());
     entity.setProperty(ApplicationLog.PROPERTY_NOTE, arg.getNote());
 
     datastoreService.put(entity);
@@ -41,11 +41,11 @@ public class ApplicationLogDao {
     ApplicationLog applicationLog = new ApplicationLog();
 
     Date date = new Date();
-    applicationLog.setTimeStampMs(date.getTime());
+//    applicationLog.setTimeStampMs(date.getTime());
 
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
     sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
-    applicationLog.setTimeStamp(sdf.format(date));
+//    applicationLog.setTimeStamp(sdf.format(date));
 
     applicationLog.setNote(note);
 

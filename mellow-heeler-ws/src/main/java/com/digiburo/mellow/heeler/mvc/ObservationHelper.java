@@ -1,8 +1,7 @@
 package com.digiburo.mellow.heeler.mvc;
 
-import com.digiburo.mellow.heeler.entity.RawObservation;
+import com.digiburo.mellow.heeler.entity.Observation;
 import com.digiburo.mellow.heeler.entity.RawObservationDao;
-import com.digiburo.mellow.heeler.json.Observation;
 import com.digiburo.mellow.heeler.json.ObservationList;
 import com.digiburo.mellow.heeler.json.ObservationRequest1;
 
@@ -30,10 +29,10 @@ public class ObservationHelper {
     RawObservationDao dao = new RawObservationDao();
 
     ObservationList observationList = observationRequest.getObservationList();
-    for (Observation observation:observationList) {
-      RawObservation rawObservation = dao.selectOne(observation.getObservationId());
+    for (com.digiburo.mellow.heeler.json.Observation observation:observationList) {
+      Observation rawObservation = dao.selectOne(observation.getObservationId());
       if (rawObservation == null) {
-        rawObservation = new RawObservation();
+        rawObservation = new Observation();
         rawObservation.setSsid(observation.getSsid());
         rawObservation.setBssid(observation.getBssid());
         rawObservation.setCapability(observation.getCapability());
@@ -45,12 +44,12 @@ public class ObservationHelper {
         rawObservation.setObservationUuid(observation.getObservationId());
         rawObservation.setSortieUuid(observationRequest.getSortieId());
 
-        long timeStampMs = observation.getTimeStampMs();
-        rawObservation.setTimeStampMs(timeStampMs);
+  //      long timeStampMs = observation.getTimeStampMs();
+  //      rawObservation.setTimeStampMs(timeStampMs);
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
         sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
-        rawObservation.setTimeStamp(sdf.format(new Date(timeStampMs)));
+  //      rawObservation.setTimeStamp(sdf.format(new Date(timeStampMs)));
 
         dao.save(rawObservation);
       } else {
@@ -68,7 +67,7 @@ public class ObservationHelper {
    * @param arg
    * @return
    */
-  public List<RawObservation> selectBySortie(String arg) {
+  public List<Observation> selectBySortie(String arg) {
     RawObservationDao dao = new RawObservationDao();
     return dao.selectBySortie(arg);
   }

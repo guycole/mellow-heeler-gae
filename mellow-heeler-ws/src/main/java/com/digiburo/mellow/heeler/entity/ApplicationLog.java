@@ -1,5 +1,7 @@
 package com.digiburo.mellow.heeler.entity;
 
+import java.util.Date;
+
 /**
  * log entity
  */
@@ -8,45 +10,47 @@ public class ApplicationLog {
 
   public static final String PROPERTY_NOTE = "note";
   public static final String PROPERTY_TIME_STAMP = "timeStamp";
-  public static final String PROPERTY_TIME_STAMP_MS = "timeStampMs";
+
+  public static final String DEFAULT_NOTE = "No Note";
 
   /**
    * free form note
    */
-  private String note;
+  private String note = DEFAULT_NOTE;
 
   /**
-   * location time as String
+   * event time in UTC
    */
-  private String timeStamp;
+  private Date timeStamp;
 
-  /**
-   * location time in UTC
-   */
-  private Long timeStampMs;
+  //////
 
   public String getNote() {
     return note;
   }
 
   public void setNote(String arg) {
-    note = arg;
+    if (arg == null) {
+      throw new NullPointerException("null note");
+    }
+
+    note = arg.trim();
+
+    if (note.isEmpty()) {
+      throw new IllegalArgumentException("empty note");
+    }
   }
 
-  public String getTimeStamp() {
+  public Date getTimeStamp() {
     return timeStamp;
   }
 
-  public void setTimeStamp(String timeStamp) {
+  public void setTimeStamp(Date timeStamp) {
+    if (timeStamp == null) {
+      throw new NullPointerException("null timeStamp");
+    }
+
     this.timeStamp = timeStamp;
-  }
-
-  public Long getTimeStampMs() {
-    return timeStampMs;
-  }
-
-  public void setTimeStampMs(long timeStampMs) {
-    this.timeStampMs = timeStampMs;
   }
 }
 /*
