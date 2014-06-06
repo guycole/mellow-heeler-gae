@@ -17,7 +17,6 @@ public class ObservationResponse1 {
   private String sortieId;
   private String status;
   private Date timeStamp = new Date();
-  private Integer messageVersion = 1;
   private Integer rowCount = 0;
 
   @JsonProperty("_links")
@@ -70,14 +69,6 @@ public class ObservationResponse1 {
 
   public void setTimeStamp(Date timeStamp) {
     this.timeStamp = timeStamp;
-  }
-
-  public Integer getMessageVersion() {
-    return messageVersion;
-  }
-
-  public void setVersion(int messageVersion) {
-    this.messageVersion = messageVersion;
   }
 
   public Links getLinks() {

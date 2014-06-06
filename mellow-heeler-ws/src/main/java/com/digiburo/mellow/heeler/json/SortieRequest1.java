@@ -8,9 +8,8 @@ package com.digiburo.mellow.heeler.json;
 public class SortieRequest1 {
   private String installationId;
   private String sortieId;
-  private String sortieName = "default";
+  private String sortieName = "Default Name";
   private Long timeStampMs;
-  private Integer messageVersion = 1;
 
   public String getInstallationId() {
     return installationId;
@@ -42,14 +41,6 @@ public class SortieRequest1 {
 
   public void setTimeStampMs(Long timeStampMs) {
     this.timeStampMs = timeStampMs;
-  }
-
-  public Integer getMessageVersion() {
-    return messageVersion;
-  }
-
-  public void setMessageVersion(Integer messageVersion) {
-    this.messageVersion = messageVersion;
   }
 }
 /*

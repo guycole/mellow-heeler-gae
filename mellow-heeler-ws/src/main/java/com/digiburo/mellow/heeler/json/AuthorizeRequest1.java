@@ -7,7 +7,6 @@ package com.digiburo.mellow.heeler.json;
  */
 public class AuthorizeRequest1 {
   private String installationId;
-  private Integer messageVersion = 1;
 
   public String getInstallationId() {
     return installationId;
@@ -15,14 +14,6 @@ public class AuthorizeRequest1 {
 
   public void setInstallationId(String installationId) {
     this.installationId = installationId;
-  }
-
-  public Integer getMessageVersion() {
-    return messageVersion;
-  }
-
-  public void setMessageVersion(Integer messageVersion) {
-    this.messageVersion = messageVersion;
   }
 }
 /*

@@ -10,5 +10,5 @@
 #
 # Author:G.S. Cole (guycole at gmail dot com)
 #
-curl -v -H "Content-Type:application/json" -d '{"installationId":"demoInstallation","messageVersion":1}' http://127.0.0.1:8080/ws/v1/authorize
+curl -v -H "Content-Type:application/json" -d '{"installationId":"demoInstallation"}' http://127.0.0.1:8080/ws/v1/authorize
 #

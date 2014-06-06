@@ -8,7 +8,6 @@ package com.digiburo.mellow.heeler.json;
 public class GeoLocationRequest1 {
   private String installationId;
   private String sortieId;
-  private Integer messageVersion = 1;
   private GeoLocationList geoLocationList = new GeoLocationList();
 
   public String getInstallationId() {
@@ -25,14 +24,6 @@ public class GeoLocationRequest1 {
 
   public void setSortieId(String sortieId) {
     this.sortieId = sortieId;
-  }
-
-  public Integer getMessageVersion() {
-    return messageVersion;
-  }
-
-  public void setMessageVersion(Integer messageVersion) {
-    this.messageVersion = messageVersion;
   }
 
   public GeoLocationList getLocationList() {

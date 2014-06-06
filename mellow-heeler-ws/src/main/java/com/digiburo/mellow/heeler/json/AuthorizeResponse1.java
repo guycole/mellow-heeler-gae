@@ -15,7 +15,6 @@ public class AuthorizeResponse1 {
   private String receipt;
   private String status;
   private Date timeStamp = new Date();
-  private Integer messageVersion = 1;
 
   @JsonProperty("_links")
   private Links links = new Links();
@@ -51,14 +50,6 @@ public class AuthorizeResponse1 {
 
   public void setTimeStamp(Date timeStamp) {
     this.timeStamp = timeStamp;
-  }
-
-  public Integer getMessageVersion() {
-    return messageVersion;
-  }
-
-  public void setVersion(int messageVersion) {
-    this.messageVersion = messageVersion;
   }
 
   public Links getLinks() {
