@@ -3,7 +3,6 @@ package com.digiburo.mellow.heeler.ws;
 import com.digiburo.mellow.heeler.datastore.dao.ReceiptDao;
 import com.digiburo.mellow.heeler.json.AuthorizeRequest1;
 import com.digiburo.mellow.heeler.json.AuthorizeResponse1;
-import com.digiburo.mellow.heeler.utility.BadGuyException;
 
 import java.util.logging.Logger;
 

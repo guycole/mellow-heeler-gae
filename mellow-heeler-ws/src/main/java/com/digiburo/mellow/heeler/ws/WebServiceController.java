@@ -9,8 +9,6 @@ import com.digiburo.mellow.heeler.json.ObservationResponse1;
 
 import com.digiburo.mellow.heeler.json.SortieRequest1;
 import com.digiburo.mellow.heeler.json.SortieResponse1;
-import com.digiburo.mellow.heeler.utility.BadGuyException;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 
 import org.springframework.web.bind.annotation.RequestBody;
