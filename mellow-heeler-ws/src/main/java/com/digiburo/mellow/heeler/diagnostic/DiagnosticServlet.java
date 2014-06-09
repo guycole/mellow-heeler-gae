@@ -42,13 +42,13 @@ public class DiagnosticServlet extends HttpServlet {
 
     response.setContentType("application/json");
     PrintWriter pw = response.getWriter();
-    pw.println("{\"receipt\":\"b4891705-c3dd-46da-927c-1fda565b76a2\",\"sortieId\":\"efgh\",\"status\":\"OK\",\"timeStamp\":\"2014-05-22T21:56:55Z\",\"messageVersion\":1,\"rowCount\":2,\"remoteIpAddress\":\"127.0.0.1\",\"_links\":{\"self\":{\"href\":\"http://127.0.0.1:8080/ws/v1/location\"}}}");
+    pw.println("{\"receipt\":\"b4891705-c3dd-46da-927c-1fda565b76a2\",\"sortieId\":\"efgh\",\"status\":\"OK\",\"timeStamp\":\"2014-05-22T21:56:55Z\",\"messageVersion\":1,\"rowCount\":2,\"remoteIpAddress\":\"127.0.0.1\",\"_links\":{\"self\":{\"href\":\"http://127.0.0.1:8080/ws1/v1/location\"}}}");
     pw.close();
   }
 
   /*
   * Connection #0 to host 127.0.0.1 left intact
-{"receipt":"b4891705-c3dd-46da-927c-1fda565b76a2","sortieId":"efgh","status":"OK","timeStamp":"2014-05-22T21:56:55Z","messageVersion":1,"rowCount":2,"remoteIpAddress":"127.0.0.1","_links":{"self":{"href":"http://127.0.0.1:8080/ws/v1/location"}}}gsc@duckman:67>
+{"receipt":"b4891705-c3dd-46da-927c-1fda565b76a2","sortieId":"efgh","status":"OK","timeStamp":"2014-05-22T21:56:55Z","messageVersion":1,"rowCount":2,"remoteIpAddress":"127.0.0.1","_links":{"self":{"href":"http://127.0.0.1:8080/ws1/v1/location"}}}gsc@duckman:67>
 
    */
 
