@@ -7,6 +7,8 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.PreparedQuery;
 import com.google.appengine.api.datastore.Query;
 
+import java.util.Date;
+
 /**
  *  installation DAO
  */
@@ -22,6 +24,7 @@ public class InstallationDao extends AbstractDao {
     Entity entity = new Entity(Installation.ENTITY_NAME);
 
     entity.setProperty(Installation.PROPERTY_ACTIVE, arg.isActive());
+    entity.setProperty(Installation.PROPERTY_CREATE_TIME, arg.getCreateTime());
     entity.setProperty(Installation.PROPERTY_INSTALLATION_UUID, arg.getInstallationUuid());
     entity.setProperty(Installation.PROPERTY_NAME, arg.getName());
     entity.setProperty(Installation.PROPERTY_NOTE, arg.getNote());
@@ -67,6 +70,7 @@ public class InstallationDao extends AbstractDao {
   private Installation converter(Entity entity) {
     Installation result = new Installation();
     result.setActive((Boolean) entity.getProperty(Installation.PROPERTY_ACTIVE));
+    result.setCreateTime((Date) entity.getProperty(Installation.PROPERTY_CREATE_TIME));
     result.setInstallationUuid((String) entity.getProperty(Installation.PROPERTY_INSTALLATION_UUID));
     result.setName((String) entity.getProperty(Installation.PROPERTY_NAME));
     result.setNote((String) entity.getProperty(Installation.PROPERTY_NOTE));

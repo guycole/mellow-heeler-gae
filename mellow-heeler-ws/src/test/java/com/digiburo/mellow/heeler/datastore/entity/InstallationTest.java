@@ -3,6 +3,9 @@ package com.digiburo.mellow.heeler.datastore.entity;
 import com.digiburo.mellow.heeler.TestHelper;
 
 import org.junit.Test;
+
+import java.util.Date;
+
 import static org.junit.Assert.*;
 
 /**
@@ -20,6 +23,8 @@ public class InstallationTest {
     assertTrue(Installation.DEFAULT_UUID.equals(installation.getInstallationUuid()));
 
     assertFalse(installation.isActive());
+
+    assertNotNull(installation.getCreateTime());
   }
 
   @Test
@@ -76,5 +81,20 @@ public class InstallationTest {
     assertTrue(installation.isActive());
     installation.setActive(false);
     assertFalse(installation.isActive());
+  }
+
+  @Test
+  public void timeTest() {
+    Date date = new Date();
+
+    Installation installation = new Installation();
+    installation.setCreateTime(date);
+    assertTrue(date.equals(installation.getCreateTime()));
+  }
+
+  @Test(expected=NullPointerException.class)
+  public void nullTimeTest() {
+    Installation installation = new Installation();
+    installation.setCreateTime(null);
   }
 }

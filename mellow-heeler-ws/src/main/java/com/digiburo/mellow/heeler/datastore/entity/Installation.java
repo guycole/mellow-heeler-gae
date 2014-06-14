@@ -1,5 +1,7 @@
 package com.digiburo.mellow.heeler.datastore.entity;
 
+import java.util.Date;
+
 /**
  * authorization/approved installations entity
  */
@@ -7,6 +9,7 @@ public class Installation extends AbstractEntity {
   public static final String ENTITY_NAME = "Installation";
 
   public static final String PROPERTY_ACTIVE = "active";
+  public static final String PROPERTY_CREATE_TIME = "createTime";
   public static final String PROPERTY_INSTALLATION_UUID = "installationUuid";
   public static final String PROPERTY_NAME = "name";
   public static final String PROPERTY_NOTE = "note";
@@ -15,6 +18,11 @@ public class Installation extends AbstractEntity {
    * true, active legal installation
    */
   private boolean active = false;
+
+  /**
+   * creation time in UTC
+   */
+  private Date createTime = new Date();
 
   /**
    * installation UUID
@@ -39,6 +47,18 @@ public class Installation extends AbstractEntity {
 
   public void setActive(boolean active) {
     this.active = active;
+  }
+
+  public Date getCreateTime() {
+    return createTime;
+  }
+
+  public void setCreateTime(Date createTime) {
+    if (createTime == null) {
+      throw new NullPointerException("null createTime");
+    }
+
+    this.createTime = createTime;
   }
 
   public String getInstallationUuid() {
