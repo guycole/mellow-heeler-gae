@@ -10,5 +10,7 @@
 #
 # Author:G.S. Cole (guycole at gmail dot com)
 #
-curl -v -H "Content-Type:application/json" -d '{"installationId":"demoInstallation","messageVersion":1}' https://mellow-heeler.appspot.com/ws/v1/authorize
+curl -v -H "Content-Type:application/json" -d '{"installationId":"demoInstallation"}' https://mellow-heeler-test.appspot.com/ws/v1/authorize
+#
+curl -v -H "Content-Type:application/json" -d '{"installationId":"bcf7210f-2ab3-4a66-9cf9-256687d99c46"}' https://mellow-heeler-test.appspot.com/ws/v1/authorize
 #
