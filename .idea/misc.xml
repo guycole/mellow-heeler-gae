@@ -4,6 +4,7 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="appengine-java" url="file://$PROJECT_DIR$/mellow-heeler-ws" />
     <file type="google-app-engine" url="file://$PROJECT_DIR$/mellow-heeler-ws" />
     <file type="web" url="file://$PROJECT_DIR$/mellow-heeler-ws" />
   </component>
@@ -27,4 +28,3 @@
     </option>
   </component>
 </project>
-
